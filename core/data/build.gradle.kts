@@ -1,3 +1,6 @@
+import org.jetbrains.kotlin.konan.properties.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.convetion.library)
     alias(libs.plugins.build.config)
@@ -26,10 +29,17 @@ dependencies {
     iosMainImplementation(libs.ktor.client.darwin)
 }
 
-buildConfig { //todo
-    buildConfigField("SUPABASE_URL", "")
+private val keystorePropertiesFile = file("keys.properties")
+private val keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+
+buildConfig { //todo?
+    buildConfigField(
+        "SUPABASE_URL",
+        keystoreProperties.getProperty("supabaseUrl")
+    )
     buildConfigField(
         "SUPABASE_KEY_SECRET",
-        ""
+        keystoreProperties.getProperty("supabaseSecretKey")
     )
 }

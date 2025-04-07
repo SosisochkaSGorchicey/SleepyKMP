@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.onEach
 import org.orbitmvi.orbit.ContainerHost
 import org.orbitmvi.orbit.container
 
-abstract class MviViewModel<S : Any, SE : Any, E : Any>(
+abstract class MviScreenModel<S : Any, SE : Any, E : Any>(
     initialState: S,
 ) : ScreenModel, ContainerHost<S, SE> {
 
@@ -21,7 +21,7 @@ abstract class MviViewModel<S : Any, SE : Any, E : Any>(
 }
 
 @Composable
-fun <S : Any, SE : Any, E : Any> MviViewModel<S, SE, E>.collectSideEffect(
+fun <S : Any, SE : Any, E : Any> MviScreenModel<S, SE, E>.collectSideEffect(
     collector: (suspend (sideEffect: SE) -> Unit),
 ) {
     val scope = rememberCoroutineScope()

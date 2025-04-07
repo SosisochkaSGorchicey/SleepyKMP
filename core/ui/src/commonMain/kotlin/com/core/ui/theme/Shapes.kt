@@ -7,18 +7,23 @@ import androidx.compose.ui.unit.dp
 
 @Immutable
 class AppShapes(
-    val mediumCorners: RoundedCornerShape = RoundedCornerShape(20),
-    val mediumCornersDP: RoundedCornerShape = RoundedCornerShape(30.dp),
-    val smallCorners: RoundedCornerShape = RoundedCornerShape(10),
-    val largeBottomCorners: RoundedCornerShape = RoundedCornerShape(
-        bottomEndPercent = 30,
-        bottomStartPercent = 30
+    val rounded: RoundedCornerShape = RoundedCornerShape(50),
+    val topForm: RoundedCornerShape = RoundedCornerShape(
+        topStartPercent = 10,
+        topEndPercent = 60
     ),
-    val mediumTopCorners: RoundedCornerShape = RoundedCornerShape(
-        topStartPercent = 20,
-        topEndPercent = 20
+    val topCorners: RoundedCornerShape = RoundedCornerShape(
+        topStart = 16.dp,
+        topEnd = 16.dp
     ),
-    val rounded: RoundedCornerShape = RoundedCornerShape(50)
+    val bottomCorners: RoundedCornerShape = RoundedCornerShape(
+        bottomStart = 16.dp,
+        bottomEnd = 16.dp
+    ),
+    val smallestCornersDp: RoundedCornerShape = RoundedCornerShape(10.dp),
+    val smallCornersDp: RoundedCornerShape = RoundedCornerShape(20.dp),
+    val mediumCornersDp: RoundedCornerShape = RoundedCornerShape(40.dp),
+    val mediumCornersPercent: RoundedCornerShape = RoundedCornerShape(25)
 )
 
 internal val LocalAppShapes = staticCompositionLocalOf { AppShapes() }
