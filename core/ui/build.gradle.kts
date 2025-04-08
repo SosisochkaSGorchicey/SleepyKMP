@@ -9,6 +9,8 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(projects.core.domain)
+            implementation(projects.core.navigation)
+
             implementation(libs.coroutines.core)
             implementation(libs.koin.core)
             implementation(libs.calf.ui)
@@ -16,6 +18,7 @@ kotlin {
             api(compose.components.resources)
             implementation(libs.compose.shimmer)
             implementation(libs.voyager.tab.navigator)
+            implementation(libs.voyager.transitions)
         }
     }
 }

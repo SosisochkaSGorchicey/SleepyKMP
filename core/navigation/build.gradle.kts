@@ -7,7 +7,6 @@ plugins {
 android.namespace = "com.core.navigation"
 
 dependencies {
-    commonMainImplementation(projects.core.ui)
     commonMainImplementation(projects.core.domain)
 
     commonMainImplementation(libs.voyager.navigator)
