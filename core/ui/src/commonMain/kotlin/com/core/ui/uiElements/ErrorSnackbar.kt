@@ -16,12 +16,13 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.core.ui.theme.AppTheme
 import com.core.ui.theme.montserratFont
+import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun ErrorSnackbar(
     modifier: Modifier,
-    errorTextRes: Int,
+    errorTextRes: StringResource,
     content: @Composable () -> Unit = {}
 ) {
     Box(

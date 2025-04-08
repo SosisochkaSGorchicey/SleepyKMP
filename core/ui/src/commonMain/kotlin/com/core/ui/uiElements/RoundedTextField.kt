@@ -11,11 +11,12 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.VisualTransformation
 import com.core.ui.theme.AppTheme
 import com.core.ui.theme.montserratFont
+import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.stringResource
 
 @Composable
 fun RoundedTextField(
@@ -23,7 +24,7 @@ fun RoundedTextField(
     currentText: String,
     placeholderText: String,
     onValueChange: (String) -> Unit,
-    errorTextRes: Int? = null,
+    errorTextRes: StringResource? = null,
     keyboardType: KeyboardType = KeyboardType.Text,
     visualTransformation: VisualTransformation = VisualTransformation.None,
 ) {
@@ -31,7 +32,7 @@ fun RoundedTextField(
         horizontalAlignment = Alignment.Start
     ) {
         Text(
-            text = errorTextRes?.let { stringResource(id = it) } ?: "",
+            text = errorTextRes?.let { stringResource(resource = it) } ?: "",
             style = AppTheme.typography.bodySuperSmall,
             fontFamily = montserratFont,
             color = AppTheme.colors.baseRed

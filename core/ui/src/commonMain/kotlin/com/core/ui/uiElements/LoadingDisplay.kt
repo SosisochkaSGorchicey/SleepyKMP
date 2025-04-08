@@ -18,9 +18,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.draw.scale
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
-import com.core.ui.R
+import com.core.ui.Res
+import com.core.ui.flower_dark_face
 import com.core.ui.theme.AppTheme
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun LoadingDisplay(
@@ -61,7 +62,7 @@ fun LoadingDisplay(
                 .fillMaxWidth(.2f)
                 .rotate(rotation)
                 .scale(scale),
-            painter = painterResource(id = R.drawable.flower_dark_face),
+            painter = painterResource(resource = Res.drawable.flower_dark_face),
             contentDescription = null,
             contentScale = ContentScale.FillWidth
         )

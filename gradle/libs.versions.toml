@@ -99,7 +99,8 @@ compose-shimmer = {module = "com.valentinilk.shimmer:compose-shimmer", version.r
 [bundles]
 
 ktor = ["ktor-client-core", "ktor-client-content-negotiation", "ktor-serialization-kotlinx-json"]
-coil = ["coil-mp", "coil-compose", "coil-compose-core", "coil-network-ktor", "ktor-client-core",]
+coil = ["coil-mp", "coil-compose", "coil-compose-core", "coil-network-ktor", "ktor-client-core"]
+voyager = ["voyager-navigator", "voyager-koin", "voyager-tab-navigator"]
 
 [plugins]
 

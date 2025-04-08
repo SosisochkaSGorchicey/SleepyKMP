@@ -4,28 +4,31 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import cafe.adriel.voyager.core.screen.ScreenKey
 import cafe.adriel.voyager.navigator.Navigator
-import cafe.adriel.voyager.navigator.tab.CurrentTab
 import cafe.adriel.voyager.navigator.tab.Tab
 import cafe.adriel.voyager.navigator.tab.TabOptions
 import cafe.adriel.voyager.transitions.SlideTransition
-import com.core.common.navigation.SharedScreen
-import com.core.common.navigation.screen
-import com.core.ui.R
+import com.core.navigation.SharedScreen
+import com.core.navigation.screen
+import com.core.ui.Res
+import com.core.ui.balance
+import com.core.ui.bell
+import com.core.ui.flower_dark_face_small
+import org.jetbrains.compose.resources.DrawableResource
 
 enum class Tabs(
-    val imageRes: Int,
+    val imageRes: DrawableResource,
     val tab: Tab
 ) {
     Content(
-        imageRes = R.drawable.balance,
+        imageRes = Res.drawable.balance,
         tab = ContentTab
     ),
     Home(
-        imageRes = R.drawable.flower_dark_face_small,
+        imageRes = Res.drawable.flower_dark_face_small,
         tab = HomeTab
     ),
     Notification(
-        imageRes = R.drawable.bell,
+        imageRes = Res.drawable.bell,
         tab = NotificationTab
     )
 }

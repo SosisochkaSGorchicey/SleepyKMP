@@ -13,11 +13,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.core.ui.Res
+import com.core.ui.flower_dark_face_small
 import com.core.ui.theme.AppTheme
-import com.core.ui.R
 import com.core.ui.theme.montserratFont
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun MainButton(
@@ -59,7 +60,7 @@ private fun ButtonImage() {
             .padding(horizontal = 6.dp)
             .size(24.dp)
             .rotate(-25f),
-        painter = painterResource(id = R.drawable.flower_dark_face_small),
+        painter = painterResource(resource = Res.drawable.flower_dark_face_small),
         contentDescription = null,
         contentScale = ContentScale.Fit
     )

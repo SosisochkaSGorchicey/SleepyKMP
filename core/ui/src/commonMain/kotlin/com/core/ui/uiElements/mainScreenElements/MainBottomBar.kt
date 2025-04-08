@@ -11,12 +11,12 @@ import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import cafe.adriel.voyager.navigator.tab.LocalTabNavigator
 import cafe.adriel.voyager.navigator.tab.Tab
 import com.core.ui.modifiers.baseRoundedBorder
 import com.core.ui.theme.AppTheme
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun MainBottomBar() {
@@ -49,7 +49,7 @@ fun RowScope.TabNavigationItem(tab: Tab) {
                     .background(AppTheme.colors.baseBlueLight)
                     .baseRoundedBorder(if (isSelected) AppTheme.colors.basePeachy else AppTheme.colors.transparent)
                     .padding(8.dp),
-                painter = painterResource(id = imageRes),
+                painter = painterResource(resource = imageRes),
                 contentDescription = null
             )
         },
