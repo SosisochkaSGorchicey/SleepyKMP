@@ -33,7 +33,7 @@ private val keystorePropertiesFile = file("keys.properties")
 private val keystoreProperties = Properties()
 keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
-buildConfig { //todo?
+buildConfig {
     buildConfigField(
         "SUPABASE_URL",
         keystoreProperties.getProperty("supabaseUrl")
