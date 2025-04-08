@@ -1,11 +1,11 @@
 package com.feature.initial.splash.screenmodel
 
-import androidx.annotation.StringRes
 import androidx.compose.runtime.Immutable
+import org.jetbrains.compose.resources.StringResource
 
 @Immutable
 data class SplashState(
-    @StringRes val errorTextRes: Int? = null
+    val errorTextRes: StringResource? = null
 )
 
 sealed interface SplashEvent {

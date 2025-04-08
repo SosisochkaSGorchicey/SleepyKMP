@@ -18,6 +18,8 @@ dependencies {
     commonMainImplementation(projects.core.common)
     commonMainImplementation(projects.core.navigation)
 
+    commonMainImplementation(projects.feature.initial)
+
     commonMainImplementation(libs.coroutines.core)
     commonMainImplementation(libs.koin.core)
     commonMainImplementation(libs.koin.compose)

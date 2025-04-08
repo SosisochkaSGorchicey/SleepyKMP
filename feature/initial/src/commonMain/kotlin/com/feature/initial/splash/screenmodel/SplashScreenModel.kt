@@ -7,6 +7,7 @@ import com.core.mvi.emitSideEffect
 import com.core.mvi.reducer
 import com.feature.initial.splash.toTextRes
 import kotlinx.coroutines.delay
+import org.jetbrains.compose.resources.StringResource
 import org.orbitmvi.orbit.syntax.simple.intent
 
 class SplashScreenModel(
@@ -39,7 +40,7 @@ class SplashScreenModel(
         }
     }
 
-    private fun showError(errorTextRes: Int) = reducer {
+    private fun showError(errorTextRes: StringResource) = reducer {
         state.copy(errorTextRes = errorTextRes)
     }
 }

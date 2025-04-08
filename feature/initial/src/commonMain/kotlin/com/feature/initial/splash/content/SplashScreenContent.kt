@@ -8,11 +8,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.scale
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.core.ui.R
+import com.core.ui.Res
+import com.core.ui.sleepy
 import com.core.ui.theme.AppTheme
 import com.core.ui.theme.mainFont
+import org.jetbrains.compose.resources.stringResource
 
 
 @Composable
@@ -30,7 +31,7 @@ fun SplashScreenContent(
         Text(
             modifier = textModifier
                 .scale(getScaleTextAnimation()),
-            text = stringResource(id = R.string.sleepy),
+            text = stringResource(resource = Res.string.sleepy),
             style = AppTheme.typography.headlineLarge,
             fontFamily = mainFont,
             color = AppTheme.colors.milkyWhite

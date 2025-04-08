@@ -5,19 +5,19 @@ plugins {
 
 android.namespace = "com.core.ui"
 
-dependencies {
-    commonMainImplementation(projects.core.domain)
-    commonMainImplementation(projects.core.navigation)
-
-    commonMainImplementation(libs.coroutines.core)
-    commonMainImplementation(libs.koin.core)
-    commonMainImplementation(libs.calf.ui)
-    commonMainImplementation(compose.materialIconsExtended)
-    commonMainApi(compose.components.resources)
-    commonMainImplementation(libs.compose.shimmer)
-
-    commonMainImplementation(libs.voyager.tab.navigator)
-    commonMainImplementation(libs.voyager.transitions)
+kotlin {
+    sourceSets {
+        commonMain.dependencies {
+            implementation(projects.core.domain)
+            implementation(libs.coroutines.core)
+            implementation(libs.koin.core)
+            implementation(libs.calf.ui)
+            implementation(compose.materialIconsExtended)
+            api(compose.components.resources)
+            implementation(libs.compose.shimmer)
+            implementation(libs.voyager.tab.navigator)
+        }
+    }
 }
 
 compose.resources {

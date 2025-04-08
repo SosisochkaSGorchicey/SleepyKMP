@@ -10,9 +10,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.res.painterResource
+import com.core.ui.Res
+import com.core.ui.dark_form
+import com.core.ui.flower_dark_face
+import com.core.ui.flower_light_face
+import com.core.ui.light_form
 import com.core.ui.theme.AppTheme
-import com.core.ui.R
+import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun BackgroundUI() {
@@ -25,7 +29,7 @@ fun BackgroundUI() {
             modifier = Modifier
                 .fillMaxHeight(.75f)
                 .align(Alignment.BottomStart),
-            painter = painterResource(id = R.drawable.light_form),
+            painter = painterResource(resource = Res.drawable.light_form),
             contentDescription = null,
             contentScale = ContentScale.FillHeight,
             alignment = Alignment.BottomStart
@@ -35,7 +39,7 @@ fun BackgroundUI() {
             modifier = Modifier
                 .fillMaxHeight(.4f)
                 .align(Alignment.BottomStart),
-            painter = painterResource(id = R.drawable.dark_form),
+            painter = painterResource(resource = Res.drawable.dark_form),
             contentDescription = null,
             contentScale = ContentScale.FillHeight,
             alignment = Alignment.TopEnd
@@ -44,7 +48,7 @@ fun BackgroundUI() {
         Image(
             modifier = smallMovingElementModifier()
                 .rotate(getRotateAnimationSmall()),
-            painter = painterResource(id = R.drawable.flower_light_face),
+            painter = painterResource(resource = Res.drawable.flower_light_face),
             contentDescription = null,
             contentScale = ContentScale.FillWidth
         )
@@ -52,7 +56,7 @@ fun BackgroundUI() {
         Image(
             modifier = bigMovingElementModifier()
                 .rotate(getRotateAnimationBig()),
-            painter = painterResource(id = R.drawable.flower_dark_face),
+            painter = painterResource(resource = Res.drawable.flower_dark_face),
             contentDescription = null,
             contentScale = ContentScale.FillWidth
         )
