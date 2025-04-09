@@ -19,6 +19,7 @@ kotlin {
             implementation(libs.compose.shimmer)
             implementation(libs.voyager.tab.navigator)
             implementation(libs.voyager.transitions)
+            implementation(libs.kotlinx.datetime)
         }
     }
 }

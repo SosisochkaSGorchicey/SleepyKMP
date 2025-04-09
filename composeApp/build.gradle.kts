@@ -19,6 +19,7 @@ dependencies {
     commonMainImplementation(projects.core.navigation)
 
     commonMainImplementation(projects.feature.initial)
+    commonMainImplementation(projects.feature.auth)
 
     commonMainImplementation(libs.coroutines.core)
     commonMainImplementation(libs.koin.core)
