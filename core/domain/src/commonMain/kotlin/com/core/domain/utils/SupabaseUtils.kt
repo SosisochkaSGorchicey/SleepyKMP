@@ -10,6 +10,7 @@ fun <T> supabaseRequestFlow(block: suspend () -> T): Flow<SupabaseResult<T>> = f
         val result = block()
         emit(SupabaseResult.Success(result))
     } catch (e: Throwable) {
+        println("TAG: supabaseRequestFlow e $e")
         emit(e.toSupabaseError())
     }
 }
