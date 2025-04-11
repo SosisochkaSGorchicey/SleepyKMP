@@ -2,6 +2,7 @@ package com.alisa.sleepy.kmp.di
 
 import com.core.data.di.dataModule
 import com.core.domain.di.domainModule
+import com.feature.audioContent.di.contentFeatureModule
 import com.feature.auth.di.authModule
 import com.feature.home.di.homeFeatureModule
 import com.feature.initial.di.initialModule
@@ -14,6 +15,7 @@ fun initKoin(): KoinApplication = startKoin {
         dataModule,
         initialModule,
         authModule,
-        homeFeatureModule
+        homeFeatureModule,
+        contentFeatureModule
     )
 }

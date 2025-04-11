@@ -21,6 +21,7 @@ dependencies {
     commonMainImplementation(projects.feature.initial)
     commonMainImplementation(projects.feature.auth)
     commonMainImplementation(projects.feature.home)
+    commonMainImplementation(projects.feature.audioContent)
 
     commonMainImplementation(libs.coroutines.core)
     commonMainImplementation(libs.koin.core)
