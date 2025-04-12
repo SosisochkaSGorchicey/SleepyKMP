@@ -1,4 +1,4 @@
-package com.feature.audioContent.presentation.components
+package com.feature.audioContent.presentation.main.components
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.ui.Modifier

@@ -1,4 +1,4 @@
-package com.feature.audioContent.presentation.screenmodel
+package com.feature.audioContent.presentation.main.screenmodel
 
 import com.core.domain.model.supabase.SupabaseResult
 import com.core.domain.repository.SupabaseDatabaseRepository

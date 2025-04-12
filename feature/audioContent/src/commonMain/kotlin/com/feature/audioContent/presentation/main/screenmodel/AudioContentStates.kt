@@ -1,4 +1,4 @@
-package com.feature.audioContent.presentation.screenmodel
+package com.feature.audioContent.presentation.main.screenmodel
 
 import androidx.compose.runtime.Immutable
 import com.core.domain.model.supabase.db.AudioDataItem

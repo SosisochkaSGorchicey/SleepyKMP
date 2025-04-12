@@ -1,4 +1,4 @@
-package com.feature.audioContent.presentation
+package com.feature.audioContent.presentation.main
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -21,10 +21,10 @@ import com.core.ui.uiElements.ErrorSnackbar
 import com.core.ui.uiElements.LoadingDisplay
 import com.core.ui.uiElements.MainButton
 import com.core.ui.uiElements.mainScreenElements.MainBottomBar
-import com.feature.audioContent.presentation.components.AudioContentScreenUI
-import com.feature.audioContent.presentation.screenmodel.AudioContentEvent
-import com.feature.audioContent.presentation.screenmodel.AudioContentScreenModel
-import com.feature.audioContent.presentation.screenmodel.AudioContentSideEffect
+import com.feature.audioContent.presentation.main.components.AudioContentScreenUI
+import com.feature.audioContent.presentation.main.screenmodel.AudioContentEvent
+import com.feature.audioContent.presentation.main.screenmodel.AudioContentScreenModel
+import com.feature.audioContent.presentation.main.screenmodel.AudioContentSideEffect
 import org.jetbrains.compose.resources.stringResource
 
 object AudioContentScreen : Screen {

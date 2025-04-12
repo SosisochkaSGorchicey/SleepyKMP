@@ -1,4 +1,4 @@
-package com.feature.audioContent.presentation.components
+package com.feature.audioContent.presentation.main.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.core.domain.model.supabase.db.AudioSection
 import com.core.ui.theme.AppTheme
-import com.feature.audioContent.presentation.screenmodel.AudioContentEvent
+import com.feature.audioContent.presentation.main.screenmodel.AudioContentEvent
 
 @Composable
 fun SectionUI(

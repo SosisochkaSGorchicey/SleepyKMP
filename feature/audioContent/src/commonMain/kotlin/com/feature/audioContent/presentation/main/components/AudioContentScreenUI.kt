@@ -1,4 +1,4 @@
-package com.feature.audioContent.presentation.components
+package com.feature.audioContent.presentation.main.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -7,8 +7,8 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.feature.audioContent.presentation.screenmodel.AudioContentEvent
-import com.feature.audioContent.presentation.screenmodel.AudioContentState
+import com.feature.audioContent.presentation.main.screenmodel.AudioContentEvent
+import com.feature.audioContent.presentation.main.screenmodel.AudioContentState
 
 @Composable
 fun AudioContentScreenUI(
