@@ -35,6 +35,7 @@ fun ArticleItem.toPresentation(): ArticleUIModel {
         titleColor = textColor.first,
         descriptionColor = textColor.second,
         isFullSize = this.isFullSize,
+        isFirst = isFirst
     )
 }
 

@@ -11,5 +11,6 @@ data class ArticleUIModel(
     val backgroundBrush: Brush,
     val titleColor: Color,
     val descriptionColor: Color,
-    val isFullSize: Boolean
+    val isFullSize: Boolean,
+    val isFirst: Boolean,
 )

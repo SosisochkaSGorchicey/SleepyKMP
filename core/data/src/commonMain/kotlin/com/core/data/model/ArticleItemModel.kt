@@ -12,6 +12,8 @@ data class ArticleItemModel(
     val backgroundImageUrl: String?,
     @SerialName("is_full_size")
     val isFullSize: Boolean,
+    @SerialName("is_first")
+    val isFirst: Boolean?,
     @SerialName("text_is_light")
     val textIsLight: Boolean?,
 )

@@ -72,7 +72,6 @@ private fun StoryPreviewUI(
             LoadingDisplay(modifier = Modifier)
         },
         error = {
-            println("TAG: SubcomposeAsyncImage error $it")
             ErrorDisplay()
         }
     )

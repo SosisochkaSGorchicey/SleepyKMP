@@ -34,14 +34,14 @@ fun LazyGridScope.articleCardsDisplay(
 ) {
     items(
         items = state.articles,
-        span = {
-            GridItemSpan(if (it.isFullSize) maxLineSpan else 1)
+        span = { item ->
+            GridItemSpan(if (item.isFullSize) maxLineSpan else 1)
         }
     ) { articleUIItem ->
         ArticleCard(
             articleUIItem = articleUIItem,
             modifier = if (articleUIItem == state.articles.last()) modifier.padding(bottom = 16.dp)
-            else Modifier
+            else Modifier,
         )
     }
 }
@@ -49,11 +49,13 @@ fun LazyGridScope.articleCardsDisplay(
 @Composable
 private fun ArticleCard(
     articleUIItem: ArticleUIModel,
-    modifier: Modifier
+    modifier: Modifier,
 ) {
     Box(
         modifier = modifier
-            .padding(horizontal = 16.dp)
+            .padding(horizontal = if (articleUIItem.isFullSize) 16.dp else 0.dp)
+            .padding(start = if (!articleUIItem.isFullSize && articleUIItem.isFirst) 16.dp else 0.dp)
+            .padding(end = if (!articleUIItem.isFullSize && !articleUIItem.isFirst) 16.dp else 0.dp)
             .fillMaxWidth()
             .aspectRatio(if (articleUIItem.isFullSize) 2.5f else 1.5f)
             .clip(AppTheme.shapes.smallCornersDp)
@@ -98,9 +100,10 @@ private fun ArticleCardImage(
 private fun ArticleCardTextDisplay(articleUIItem: ArticleUIModel) {
     Column(
         modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        verticalArrangement = Arrangement.SpaceBetween,
+            .padding(horizontal = 16.dp)
+            .padding(top = 16.dp)
+            .fillMaxSize(),
+        verticalArrangement = Arrangement.spacedBy(16.dp),
         horizontalAlignment = Alignment.Start
     ) {
         Text(
@@ -117,7 +120,6 @@ private fun ArticleCardTextDisplay(articleUIItem: ArticleUIModel) {
                 overflow = TextOverflow.Ellipsis,
                 style = AppTheme.typography.bodySmall,
                 color = articleUIItem.descriptionColor,
-                maxLines = if (articleUIItem.isFullSize) 4 else 2
             )
         }
     }
